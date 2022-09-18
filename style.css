@@ -11,6 +11,8 @@ body {
 
 }
 
+/* Logo i Menu */
+
 .nav__wrapper {
     display: flex;
     justify-content: center;
@@ -27,14 +29,16 @@ body {
     /* flex-grow: 1; */
 }
 
-.navigation__container li {
+.navigation__container li,
+.hamburger__menu li {
     list-style-type: none;
     padding: 10px;
     font-size: 20px;
     
 }
 
-.navigation__container a {
+.navigation__container a,
+.hamburger__menu a {
     text-decoration: none;
     color: #000;
 }
@@ -61,6 +65,18 @@ body {
     font-size: 20px;
 }
 
+.hamburger__menu {
+    display: none;
+}
+
+.fa-x {
+    display: none;
+}
+
+
+
+/* Hero image */
+
 .hero__image__wrapper {
     
 }
@@ -82,5 +98,66 @@ body {
     padding: 50px;
 }
 
+@media (min-width: 120px) {
+    .nav__wrapper {
+        justify-content: space-between;
+        position: relative;
+    }
+    
+    .navigation__container {
+        display: none;
+    }
 
+    .fa-solid {
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .fa-bars {
+        display: block;     
+    }
+
+    .hamburger__menu {
+        display: none;
+        width: 50%;
+        height: 100vh;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 1;
+        background-color: orange;
+    }
+
+    .hamburger__menu .navigation__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) {
+    .fa-bars {
+        display: none;
+    }
+    .nav__wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo__container {
+        flex-grow: 1;    
+    }
+    .logo__wrapper {
+        justify-content: center;
+    }
+
+    .navigation__container {
+        display: flex;
+    }
+}
+
+@media (min-width: 1200px) {
+    .logo__container {
+        flex-grow: 0;    
+    }
+}
     

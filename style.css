@@ -98,6 +98,14 @@ body {
     padding: 50px;
 }
 
+/* Footer */
+
+.footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 @media (min-width: 120px) {
     .nav__wrapper {
         justify-content: space-between;

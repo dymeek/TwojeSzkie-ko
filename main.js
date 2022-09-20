@@ -1,8 +1,12 @@
 const hamburger = document.querySelector('.fa-bars');
 const iksButton = document.querySelector('.fa-x');
 const hamburgerMenu = document.querySelector('.hamburger__menu');
+const leftAnimation = document.querySelector('.section__wrapper__img');
+const rightAnimation = document.querySelector('.wrapper__section__description');
+const sectionOne = document.querySelector('.section__one');
 
 
+console.log(leftAnimation)
 
 const showMenu = () => {
     hamburgerMenu.style.display = "flex";    
@@ -31,7 +35,15 @@ const newDate = () => {
 
 newDate();
 
-
+window.addEventListener('mousemove', (e) => {
+    // console.log(e);
+    if(e.target === sectionOne){
+        console.log(true);
+        leftAnimation.style.animation = 'showLeft 1s forwards ease-in';
+        // leftAnimation.classList.add('active__left__animation');
+        rightAnimation.style.animation = 'showRight .8s forwards ease-in';
+    }
+})
 
 
 

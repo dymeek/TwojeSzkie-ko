@@ -289,11 +289,23 @@ h1, h2 {
     align-items: center;
 }
 
-.section__three__img__wrapper img {
+.img__wrapper {
+    overflow: hidden;
     width: 350px;
     height: 350px;
 }
+.section__three__img__wrapper img {
+    overflow: hidden;    
+    width: 350px;
+    height: 350px;
+    transition: 0.5s;
+}
 
+.section__three__img__wrapper img:hover {
+    width: 400px;
+    height: 400px;
+}
+ 
 .section__three__gallery__wrapper,
 .section__three__contact__wrapper {
     display: flex;

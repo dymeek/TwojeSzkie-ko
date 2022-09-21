@@ -11,6 +11,10 @@ body {
 
 }
 
+h1, h2 {
+    text-transform: uppercase;
+}
+
 /* Logo i Menu */
 
 .nav__wrapper {
@@ -104,8 +108,11 @@ body {
 
 .footer__wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    height: 2rem;
+    background-color: orange;
+    margin-top: 10px;
 }
 
 @media (min-width: 120px) {
@@ -172,7 +179,9 @@ body {
 
     /* Section One */
 
-.section__one {
+.section__one,
+.section__two,
+.section__three {
     display: flex;
     flex-wrap: wrap;
     margin-top: 10px;
@@ -238,5 +247,84 @@ body {
     align-items: flex-start;
     text-align: center;
 }
+
+/* section two */
+
+.section__two {
+    justify-content: center;
+    align-items: center;
+}
+.wrapper__section__two__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper__section__two__description h1 {
+    font-size: 40px;
+    padding: 10px;
+}
+
+.wrapper__section__two__description li {
+    font-size: 22px;
+    padding: 10px;
+}
+
+/* section three */
+
+.section__three {
+    justify-content: center;
+    align-items: center;
+}
+
+.section__three h1 {    
+    font-size: 40px;
+    padding: 10px;
+}
+.section__three__img__wrapper {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section__three__img__wrapper img {
+    width: 350px;
+    height: 350px;
+}
+
+.section__three__gallery__wrapper,
+.section__three__contact__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.section__three h2 {
+    font-size: 30px;
+    padding: 10px;
+}
+
+.section__three a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.section__three button {    
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: .5s;
+}
+
+.section__three button:hover {
+    background-color: orange;
+}
+
 }
     

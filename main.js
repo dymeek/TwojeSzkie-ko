@@ -27,20 +27,16 @@ const newDate = () => {
     const minutes = date.getMinutes();
     const sec = date.getSeconds();
     const showTime = `${hours < 10 ? "0" + hours : hours}:${minutes < 10 ? "0" + minutes : minutes}:${sec < 10 ? "0" + sec : sec}`;
-
-    // time.innerHTML = showTime;
+    
     const time = document.querySelector('.time').innerText = showTime;
     let t = setTimeout(() => { newDate() }, 1000);
 }
 
 newDate();
 
-window.addEventListener('mousemove', (e) => {
-    // console.log(e);
-    if(e.target === sectionOne){
-        console.log(true);
+window.addEventListener('mousemove', (e) => {    
+    if(e.target === sectionOne){        
         leftAnimation.style.animation = 'showLeft 1s forwards ease-in';
-        // leftAnimation.classList.add('active__left__animation');
         rightAnimation.style.animation = 'showRight .8s forwards ease-in';
     }
 })

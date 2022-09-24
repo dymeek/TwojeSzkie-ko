@@ -30,14 +30,38 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
+        margin: 5px;
     }
 
     .form__box {
         display: flex;
         flex-direction: column;
+        width: 100%;
         margin-bottom: 1rem;
     }
+    .form__box label,
+    .form__box input,
+    .form__box textarea {
+        flex-basis: 90%;
+        font-size: 20px;
+        margin-bottom: 3px;
+    }
+
+    .btn {
+        align-self: center;
+        font-size: 20px;
+        padding: 5px 10px;
+        cursor: pointer;
+        text-transform: uppercase;
+        text-align: center;
+
+    }
+    iframe {
+        height: 300px;
+        width: 100%;
+    }
+    
 }
 
 @media (min-width: 768px) {
@@ -53,4 +77,17 @@
         align-items: center;
         justify-content: center;
     }
+
+    .wrapper {
+        display: flex;
+    }
+
+    .form__wrapper,
+    iframe {
+        flex: 50%;
+    }
+}
+
+@media (min-width: 1200px){
+
 }

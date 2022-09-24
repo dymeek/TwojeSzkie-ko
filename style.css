@@ -32,7 +32,6 @@ h1, h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* flex-grow: 1; */
 }
 
 .navigation__container li,
@@ -66,10 +65,6 @@ h1, h2 {
 .logo h1 {
     margin-right: 100px;
 }
-
-/* .logo .fa-solid {
-    font-size: 20px;
-} */
 
 .hamburger__menu {
     display: none;
@@ -233,7 +228,7 @@ h1, h2 {
     padding: 10px;
 }
 
-.section__three button {    
+.btn {    
     border: 1px solid black;
     border-radius: 10px;
     transition: .5s;
@@ -386,7 +381,6 @@ h1, h2 {
     height: 350px;
 }
 .section__three__img__wrapper img {
-    overflow: hidden;    
     width: 350px;
     height: 350px;
     transition: 0.5s;
@@ -402,7 +396,7 @@ h1, h2 {
     padding: 10px;
 }
 
-.section__three button:hover {
+.btn:hover {
     background-color: orange;
 }
 

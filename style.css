@@ -67,9 +67,9 @@ h1, h2 {
     margin-right: 100px;
 }
 
-.logo .fa-solid {
+/* .logo .fa-solid {
     font-size: 20px;
-}
+} */
 
 .hamburger__menu {
     display: none;
@@ -79,13 +79,7 @@ h1, h2 {
     display: none;
 }
 
-
-
 /* Hero image */
-
-.hero__image__wrapper {
-    
-}
 
 .hero__image {
     width: 100%;
@@ -110,7 +104,6 @@ h1, h2 {
     text-align: center;
 }
 
-
 /* Footer */
 
 .footer__wrapper {
@@ -132,7 +125,8 @@ h1, h2 {
         display: none;
     }
 
-    .fa-solid {
+    .fa-bars,
+    .fa-x {
         font-size: 2rem;
         cursor: pointer;
     }
@@ -244,6 +238,7 @@ h1, h2 {
     border-radius: 10px;
     transition: .5s;
 }
+
 }
 
 @media (min-width: 768px) {
@@ -297,20 +292,6 @@ h1, h2 {
 
     /* Section One */
 
-/* .section__one,
-.section__two,
-.section__three {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 10px;
-    background-color: #ddd;    
-} */
-
-/* .section__wrapper__img,
-.wrapper__section__description {
-    flex-basis: 50%;    
-} */
-
 .section__wrapper__img {
     transform: translateX(-100%);
 }
@@ -339,7 +320,6 @@ h1, h2 {
     }
 }
 .section__image {
-    /* width: 100%; */
     height: 400px;
 }
 
@@ -399,11 +379,6 @@ h1, h2 {
     font-size: 40px;
     padding: 10px;
 }
-/* .section__three__img__wrapper {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-} */
 
 .img__wrapper {
     overflow: hidden;
@@ -421,34 +396,11 @@ h1, h2 {
     width: 400px;
     height: 400px;
 }
- 
-/* .section__three__gallery__wrapper,
-.section__three__contact__wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */
-
 
 .section__three h2 {
     font-size: 30px;
     padding: 10px;
 }
-/* 
-.section__three a {
-    display: inline-block;
-    text-decoration: none;
-    color: #000;
-    font-size: 18px;
-    padding: 10px;
-}
-
-.section__three button {    
-    border: 1px solid black;
-    border-radius: 10px;
-    transition: .5s;
-} */
 
 .section__three button:hover {
     background-color: orange;

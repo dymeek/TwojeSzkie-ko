@@ -76,21 +76,23 @@
             <div class="form__wrapper">
                 <div class="form__box">
                     <label for="name">Imię i nazwisko</label>
-                    <input type="text" placeholder="Imię i nazwisko">
+                    <input type="text" id="name" placeholder="Imię i nazwisko">
                 </div>
                 <div class="form__box">
                     <label for="mail">Adres e-mail</label>
-                    <input type="mail" placeholder="E-mail">
+                    <input type="mail" placeholder="E-mail" id="mail">
                 </div>
                 <div class="form__box">
                     <label for="topic">Temat wiadomości</label>
-                    <input type="text" placeholder="Temat">
+                    <input type="text" placeholder="Temat" id="topic">
                 </div>
                 <div class="form__box">
                     <label for="textarea">Wiadomość</label>
-                    <textarea name="textarea" placeholder="Wpisz wiadomość..."></textarea>
+                    <textarea id="textarea" name="textarea" placeholder="Wpisz wiadomość..."></textarea>
+                    <p class="error-message"></p>
                 </div>
-                <button class="btn">Wyślij</button>
+                <button class="btn" id="submit">Wyślij</button>
+                
             </div>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d148784.6964643739!2d18.54994454420147!3d54.36120631349869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd731c14d4fa6f%3A0x9bb9fbf163b7be8d!2zR2RhxYRzaw!5e0!3m2!1spl!2spl!4v1664025446596!5m2!1spl!2spl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>

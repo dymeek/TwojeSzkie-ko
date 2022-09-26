@@ -85,9 +85,16 @@
     .form__wrapper,
     iframe {
         flex: 50%;
+        
     }
 }
 
 @media (min-width: 1200px){
+    iframe {
+        height: 400px;
+    }
+}
 
+.error-message {
+    display: none;
 }

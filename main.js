@@ -5,7 +5,6 @@ const leftAnimation = document.querySelector('.section__wrapper__img');
 const rightAnimation = document.querySelector('.wrapper__section__description');
 const sectionOne = document.querySelector('.section__one');
 
-
 console.log(leftAnimation)
 
 const showMenu = () => {
@@ -41,7 +40,71 @@ window.addEventListener('mousemove', (e) => {
     }
 })
 
-
-
 hamburger.addEventListener('click', showMenu)
 iksButton.addEventListener('click', closeMenu)
+
+
+/* Walidacja Formularza */
+
+const submitBtn = document.getElementById('submit');
+const userName = document.getElementById('name');
+const mail = document.getElementById('mail');
+const topic = document.getElementById('topic');
+const errorMSG = document.querySelector('.error-message');
+const textArea = document.getElementById('textarea');
+
+const checkUsername = () => {
+    if(userName.value === ''){
+        errorMSG.textContent = 'Podaj prawidłowe dane!'
+        errorMSG.style.display = 'block';
+    }else {
+        errorMSG.style.display = 'none';
+        userName.value = '';
+    }
+}
+
+const checkEmail = () => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,3}))$/;
+    if(re.test(mail.value)){
+        errorMSG.style.display = 'none';
+        mail.value = '';
+    }else {
+        errorMSG.textContent = 'Niepoprawny adres e-mail!'
+        errorMSG.style.display = 'block';
+    }
+}
+
+const checkTopic = () => {
+    if(topic.value !== ''){
+        topic.value = '';
+        errorMSG.style.display = 'none';
+    }else {
+        errorMSG.textContent = 'Proszę wpisać temat wiadomości!';
+        errorMSG.style.display =' block';
+    }
+}
+
+const checkTextArea = () => {
+    if(textArea.value !== ''){
+        errorMSG.style.display = 'none';
+        textArea.value = '';
+    }else {
+        errorMSG.textContent = 'Proszę wpisać wiadomość!';
+        errorMSG.style.display = 'block';
+    }
+}
+
+const sendForm = e => {
+    e.preventDefault();
+    if(topic.value !== '' && userName.value !== '' && mail.value !== '' && textArea !== '') {
+        checkUsername();
+        checkEmail();
+        checkTopic();
+        checkTextArea();
+    }else {
+        errorMSG.textContent = 'Wszsytkie pola muszą być uzupełnione';
+        errorMSG.style.display = 'block';
+    }
+}
+
+submitBtn.addEventListener('click', sendForm);

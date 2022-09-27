@@ -4,6 +4,7 @@ const hamburgerMenu = document.querySelector('.hamburger__menu');
 const leftAnimation = document.querySelector('.section__wrapper__img');
 const rightAnimation = document.querySelector('.wrapper__section__description');
 const sectionOne = document.querySelector('.section__one');
+const imageWrapper = document.querySelector('.hero__image');
 
 console.log(leftAnimation)
 
@@ -33,9 +34,9 @@ const newDate = () => {
 
 newDate();
 
-window.addEventListener('mousemove', (e) => {    
-    if(e.target === sectionOne){        
-        leftAnimation.style.animation = 'showLeft 1s forwards ease-in';
+window.addEventListener('mousemove', (e) => {  
+    if(e.target === imageWrapper){ 
+        leftAnimation.style.animation = 'showLeft .8s forwards ease-in';
         rightAnimation.style.animation = 'showRight .8s forwards ease-in';
     }
 })

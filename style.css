@@ -6,6 +6,7 @@
 
 body {
     max-width: 1400px;
+    min-height: 100vh;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -101,13 +102,16 @@ h1, h2 {
 
 /* Footer */
 
+.footer {
+    margin-top: auto;
+}
+
 .footer__wrapper {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 2rem;
-    background-color: orange;
-    margin-top: 10px;
+    background-color: orange;    
 }
 
 @media (min-width: 120px) {
@@ -288,30 +292,35 @@ h1, h2 {
     /* Section One */
 
 .section__wrapper__img {
-    transform: translateX(-100%);
+    transform: translateY(+100%);
+    z-index: -1;
 }
 
 .wrapper__section__description {
-    transform: translateX(100%);
+    transform: translateY(100%);
 }
 
 @keyframes showLeft {
-    form {
-        transform: translateX(-100%);
+    from {
+        transform: translateY(+100%);
+        z-index: -1;
     }
 
     to {
-        transform: translateX(0);
+        transform: translateY(0); 
+        z-index: 1;
     }
 }
 
 @keyframes showRight {
     from {
-        transform: translateX(100%)
+        transform: translateY(+100%);
+        z-index: -1;
     }
 
     to {
-        transform: translateX(0)
+        transform: translateY(0); 
+        z-index: 1;
     }
 }
 .section__image {

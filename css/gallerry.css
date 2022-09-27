@@ -5,8 +5,7 @@
 @media (min-width: 120px) {
     .gallerry__wrapper {
         display: flex;
-        flex-direction: column;
-        
+        flex-direction: column; 
     }
     .image-box {
         width: 300px;
@@ -30,4 +29,31 @@
         cursor: pointer;
         opacity: 1;
     }
+}
+
+@media (min-width: 480px) {
+    .image-box {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (min-width: 768px) {
+    .image-box {
+        width: 700px;
+        height: 500px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .gallerry__wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .image-box {
+        flex-basis: 49%;
+        height: 500px;
+    }
+
 }

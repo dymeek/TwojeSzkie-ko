@@ -8,13 +8,19 @@ let counter = 0;
 
 images.map(image => {    
     const div = document.createElement('div');
-    div.setAttribute('id', counter++);
+    
     div.classList.add('image-box');
     const img = document.createElement('img');
+    img.setAttribute('id', counter++);
     img.src = image;    
     
     div.appendChild(img);    
     
     galleryWrapper.appendChild(div);
 
+})
+
+window.addEventListener('click', (e) => {
+    console.log(e.target);
+    console.log(e.target.id)
 })

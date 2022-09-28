@@ -3,7 +3,7 @@
 }
 
 @media (min-width: 120px) {
-    .gallerry__wrapper {
+    .gallery__wrapper {
         display: flex;
         flex-direction: column; 
     }
@@ -11,7 +11,7 @@
         width: 300px;
         height: 300px;
         overflow: hidden;
-        margin: 0 auto;
+        margin: 5px auto;
     }
 
     img {
@@ -23,7 +23,6 @@
     }
 
     img:hover {
-        /* height: 400px; */
         height: 120%;
         width: 120%;
         cursor: pointer;
@@ -46,7 +45,7 @@
 }
 
 @media (min-width: 1024px) {
-    .gallerry__wrapper {
+    .gallery__wrapper {
         flex-direction: row;
         flex-wrap: wrap;
     }
@@ -56,4 +55,28 @@
         height: 500px;
     }
 
+}
+
+/* .popup {
+    width: 400px;
+    height: 500px;
+    background-color: #ddd;
+    z-index: 2;
+} */
+
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 300px;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background-color: #fff;
+    border: solid 2px black;
+    border-radius: 8px;
+    transition: top .5s;
 }

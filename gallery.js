@@ -6,8 +6,9 @@ const modal = document.querySelector('.modal');
 const modalContent = document.querySelector('.modal-content');
 const rightArrow = document.querySelector('.fa-angle-right');
 const leftArrow = document.querySelector('.fa-angle-left');
+const slideNumber = document.querySelector('.slide-number');
 
-const images = ['/images/lustro.jpeg', "/images/lustro-2.jpeg", "/images/ściana-szklana.jpeg", "/images/ścianka-szklana-industrialna.jpeg", "/images/balustrada-zewnetrzna.jpeg", "/images/balustrada-zewnetrzna-2.jpeg", "/images/kabina-prysznicowa.jpeg", "/images/kabina-prysznicowa-2.jpeg", "/images/ścianka-walk-in.jpg", "/images/panele-szklane.jpeg"];
+const images = ["/images/lustro.jpeg", "/images/lustro-2.jpeg", "/images/ściana-szklana.jpeg", "/images/ścianka-szklana-industrialna.jpeg", "/images/balustrada-zewnetrzna.jpeg", "/images/balustrada-zewnetrzna-2.jpeg", "/images/kabina-prysznicowa.jpeg", "/images/kabina-prysznicowa-2.jpeg", "/images/ścianka-walk-in.jpg", "/images/panele-szklane.jpeg"];
 let counter = 0;
 
 images.map(image => {    
@@ -22,34 +23,28 @@ images.map(image => {
 
 galleryWrapper.addEventListener('click', (e) => {
     let id = e.target.id;
-    console.log(e.target.id) 
-    counter = e.target.id;
-    console.log(counter)
+    counter = e.target.id; 
     modal.style.display = 'block';    
     const showImg = images[e.target.id];
     modalContent.style.backgroundImage = `url(${showImg})`;
 })
 
-const prevSlide = () => {    
-    let showImg = images[--counter]  
-    console.log(counter)    
-    modalContent.style.backgroundImage = `url(${showImg})`;
-    console.log(showImg);
+const prevSlide = () => { 
+    counter--;    
     if(counter === -1) {
-        // counter = 9
-        console.log(showImg);
-        counter = images.length - 1;
-        console.log(showImg);
-        console.log(counter);  
+        counter = images.length -1;
     }
+    modalContent.style.backgroundImage = `url(${images[counter]})`;
+    slideNumber.textContent = `${counter + 1}/${images.length}`;
 }
 
 const nextSlide = () => {
-    const showImg = images[++counter];
-    modalContent.style.backgroundImage = `url(${showImg})`;
-    if(counter === images.length - 1){
-        counter = -1;
+    counter++
+    if(counter === images.length){
+        counter = 0;
     }
+    modalContent.style.backgroundImage = `url(${images[counter]})`;
+    slideNumber.textContent = `${counter + 1}/${images.length}`;
 }
 
 leftArrow.addEventListener('click', prevSlide);

@@ -1,5 +1,4 @@
 /* Galeria */
-
 const body = document.querySelector('body');
 const galleryWrapper = document.querySelector('.gallery__wrapper');
 const modal = document.querySelector('.modal');
@@ -10,6 +9,7 @@ const slideNumber = document.querySelector('.slide-number');
 const playSlideshow = document.querySelector('.fa-play');
 const pauseSlideshow = document.querySelector('.fa-pause');
 const stopSlideshow = document.querySelector('.fa-stop');
+const close = document.querySelector('.fa-xmark');
 
 
 const images = ["/images/lustro.jpeg", "/images/lustro-2.jpeg", "/images/ściana-szklana.jpeg", "/images/ścianka-szklana-industrialna.jpeg", "/images/balustrada-zewnetrzna.jpeg", "/images/balustrada-zewnetrzna-2.jpeg", "/images/kabina-prysznicowa.jpeg", "/images/kabina-prysznicowa-2.jpeg", "/images/ścianka-walk-in.jpg", "/images/panele-szklane.jpeg"];
@@ -33,6 +33,8 @@ galleryWrapper.addEventListener('click', (e) => {
     modal.style.display = 'block';    
     const showImg = images[e.target.id];
     modalContent.style.backgroundImage = `url(${showImg})`;
+    const numberOfSlide = parseInt(e.target.id) + 1;
+    slideNumber.textContent = `${numberOfSlide}/${images.length}`;
 })
 
 const prevSlide = () => { 
@@ -82,6 +84,11 @@ playSlideshow.addEventListener('click', () => {
     })
 });
 
+const closeModal = () => {
+    modal.style.display = 'none';
+}
+
+close.addEventListener('click', closeModal);
 
 
 leftArrow.addEventListener('click', prevSlide);

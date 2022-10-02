@@ -67,6 +67,8 @@
     overflow: auto;    
     z-index: 1;
     background-color: rgba(0,0,0,.9);
+    animation: zoom 0.6s; 
+    
 }
 
 .modal-content {  
@@ -82,7 +84,16 @@
     background-image: url();
     background-position: center center;
     background-size: cover;
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat;  
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
 }
 
 .slide-number {
@@ -96,7 +107,8 @@
 .fa-stop, 
 .fa-play,
 .fa-angle-left,
-.fa-angle-right {
+.fa-angle-right,
+.fa-xmark {
     font-size: 3rem;
     color: #fff;
     padding: 10px;
@@ -116,6 +128,12 @@
 
 .fa-angle-left {
     left: 0;
+}
+
+.fa-xmark {
+    position: fixed;
+    top: 0;
+    right: 0;
 }
 
 .slideshow {

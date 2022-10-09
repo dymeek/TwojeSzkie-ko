@@ -60,11 +60,7 @@ h1, h2 {
     align-items: center;
     text-decoration: none;
     color: #000;
-    
-}
-
-.logo h1 {
-    margin-right: 100px;
+    text-shadow: 3px 3px orange;
 }
 
 .hamburger__menu {
@@ -305,7 +301,8 @@ h1, h2 {
 
 @media (min-width: 1200px) {
     .logo__container {
-        flex-grow: 0;    
+        flex-grow: 0;
+        margin-right: 2rem;    
     }
 
     .hero__image {    

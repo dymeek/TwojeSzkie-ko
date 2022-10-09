@@ -41,8 +41,9 @@ window.addEventListener('mousemove', (e) => {
     }
 })
 
-window.addEventListener('mousemove', e => {
-    if(e.clientY > 500) {        
+window.addEventListener('scroll', e => {
+    console.log(window.scrollY)
+    if(window.scrollY > 400) {        
         sectionTwo.style.animation = 'zoom 0.8s forwards';
     }
 } )

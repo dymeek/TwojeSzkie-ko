@@ -87,8 +87,9 @@ h1, h2 {
     opacity: 0.5;
 }
 
-.hero__image h1 {
-    color: orange;
+.hero-image-h1 {
+    color: #32180A;
+    text-shadow: 3px 3px orange;
     text-transform: uppercase;
     text-align: center;
     padding: 70px;

@@ -4,9 +4,8 @@ const hamburgerMenu = document.querySelector('.hamburger__menu');
 const leftAnimation = document.querySelector('.section__wrapper__img');
 const rightAnimation = document.querySelector('.wrapper__section__description');
 const sectionOne = document.querySelector('.section__one');
+const sectionTwo = document.querySelector('.section__two');
 const imageWrapper = document.querySelector('.hero__image');
-
-console.log(leftAnimation)
 
 const showMenu = () => {
     hamburgerMenu.style.display = "flex";    
@@ -37,9 +36,16 @@ newDate();
 window.addEventListener('mousemove', (e) => {  
     if(e.target === imageWrapper){ 
         leftAnimation.style.animation = 'showLeft .8s forwards ease-in';
-        rightAnimation.style.animation = 'showRight .8s forwards ease-in';
+        rightAnimation.style.animation = 'showRight .8s forwards ease-in';        
+        sectionOne.style.backgroundColor = '#ddd';
     }
 })
+
+window.addEventListener('mousemove', e => {
+    if(e.clientY > 500) {        
+        sectionTwo.style.animation = 'zoom 0.8s forwards';
+    }
+} )
 
 hamburger.addEventListener('click', showMenu)
 iksButton.addEventListener('click', closeMenu)

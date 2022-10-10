@@ -12,7 +12,7 @@ const stopSlideshow = document.querySelector('.fa-stop');
 const close = document.querySelector('.fa-xmark');
 
 
-const images = ["../images/lustro.jpeg", "../images/lustro-2.jpeg", "../images/ściana-szklana.jpeg", "../images/ścianka-szklana-industrialna.jpeg", "../images/balustrada-zewnetrzna.jpeg", "../images/balustrada-zewnetrzna-2.jpeg", "../images/kabina-prysznicowa.jpeg", "../images/kabina-prysznicowa-2.jpeg", "../images/ścianka-walk-in.jpg", "../images/panele-szklane.jpeg"];
+const images = ["../images/lustro-mini.jpg", "../images/lustro-2-mini.jpg", "../images/ściana-szklana-mini.jpg", "../images/ścianka-szklana-industrialna-mini.jpg", "../images/balustrada-zewnetrzna-mini.jpg", "../images/balustrada-zewnetrzna-2-mini.jpg", "../images/kabina-prysznicowa-mini.jpg", "../images/kabina-prysznicowa-2-mini.jpg", "../images/ścianka-walk-in-mini.jpg", "../images/panele-szklane-mini.jpg"];
 let counter = 0;
 
 images.map(image => {    
